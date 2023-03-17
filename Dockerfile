@@ -4,7 +4,7 @@ FROM golang:1.20-bullseye AS golang-builder
 ARG PACKAGE=wait-for-port
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG VERSION=1.0.3
+ARG VERSION=1.0.6
 ARG REF=v${VERSION}
 ARG CGO_ENABLED=0
 
