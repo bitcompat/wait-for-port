@@ -12,9 +12,9 @@ jobs:
       name: main
       image_tag: |
         latest
-        1.0.3-bullseye-r1 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
-        1.0.3-bullseye # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
-        1.0.3 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
+        1.0.6-bullseye-r1 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
+        1.0.6-bullseye # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
+        1.0.6 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
         1.0 # renovate: datasource=github-releases depName=bitnami/wait-for-port versioning=regex:^(?<major>\d+)(\.(?<minor>\d+))$ extractVersion=^v(?<version>\d+\.\d+)
         1 # renovate: datasource=github-releases depName=bitnami/wait-for-port versioning=regex:^(?<major>\d+)$ extractVersion=^v(?<version>\d+)
     secrets: inherit
