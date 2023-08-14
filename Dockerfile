@@ -4,8 +4,8 @@ FROM golang:1.21-bullseye AS golang-builder
 ARG PACKAGE=wait-for-port
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG VERSION=1.0.6
-ARG REF=v${VERSION}
+ARG BUILD_VERSION=1.0.6
+ARG REF=v${BUILD_VERSION}
 ARG CGO_ENABLED=0
 
 RUN --mount=type=cache,target=/root/.cache/go-build <<EOT /bin/bash
@@ -21,7 +21,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build <<EOT /bin/bash
     go build -v -ldflags '-d -s -w' .
     mkdir -p /opt/bitnami/${TARGET_DIR}/licenses
     mkdir -p /opt/bitnami/${TARGET_DIR}/bin
-    cp -f LICENSE.md /opt/bitnami/${TARGET_DIR}/licenses/${PACKAGE}-${VERSION}.md
+    cp -f LICENSE.md /opt/bitnami/${TARGET_DIR}/licenses/${PACKAGE}-${BUILD_VERSION}.md
     cp -f ${PACKAGE} /opt/bitnami/${TARGET_DIR}/bin/${PACKAGE}
     popd
 
