@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.9
-FROM golang:1.23-bullseye AS golang-builder
+FROM golang:1.24-bullseye AS golang-builder
 
 ARG PACKAGE=wait-for-port
 ARG TARGET_DIR=common
