@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.9
+# syntax=docker/dockerfile:1.17
 FROM golang:1.23-bullseye AS golang-builder
 
 ARG PACKAGE=wait-for-port
