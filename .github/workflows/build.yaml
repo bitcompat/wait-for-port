@@ -10,7 +10,7 @@ jobs:
     uses: bitcompat/base/.github/workflows/build.yaml@main
     with:
       name: main
-      version: 1.0.8 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
+      version: 1.0.10 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
       latest: true
       major_only_tag: true
     secrets: inherit

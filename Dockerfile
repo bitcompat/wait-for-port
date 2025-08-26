@@ -1,10 +1,10 @@
-# syntax=docker/dockerfile:1.9
-FROM golang:1.23-bullseye AS golang-builder
+# syntax=docker/dockerfile:1.17
+FROM golang:1.25-bookworm AS golang-builder
 
 ARG PACKAGE=wait-for-port
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG BUILD_VERSION=1.0.8
+ARG BUILD_VERSION=1.0.10
 ARG REF=v${BUILD_VERSION}
 ARG CGO_ENABLED=0
 
@@ -28,7 +28,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build <<EOT /bin/bash
     strip --strip-all /opt/bitnami/common/bin/* || true
 EOT
 
-FROM bitnami/minideb:bullseye as stage-0
+FROM bitnami/minideb:bookworm as stage-0
 
 COPY --link --from=golang-builder /opt/bitnami /opt/bitnami
 ENTRYPOINT ["/opt/bitnami/common/bin/wait-for-port"]
