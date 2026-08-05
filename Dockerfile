@@ -4,7 +4,7 @@ FROM golang:1.25-bookworm AS golang-builder
 ARG PACKAGE=wait-for-port
 ARG TARGET_DIR=common
 # renovate: datasource=github-releases depName=bitnami/wait-for-port extractVersion=^v(?<version>\d+\.\d+.\d+)
-ARG BUILD_VERSION=1.0.10
+ARG BUILD_VERSION=1.0.11
 ARG REF=v${BUILD_VERSION}
 ARG CGO_ENABLED=0
 
